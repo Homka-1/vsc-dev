@@ -4,6 +4,11 @@
     scroll-behavior: smooth;
 }
 
+a{
+    color: white;
+    text-decoration: none;
+}
+
 button {
     border: none;
     outline: none;
@@ -11,8 +16,8 @@ button {
 }
 
 body {
-      margin-top: 63px;
-    height: 3000px;
+    margin-top: 63px;
+    height: 2000px;
 }
 
 .top{
@@ -96,12 +101,11 @@ body {
 }
 
 object{
-    width: 256.29px;
-    height: 39.27px;
+    width: 256px;
+    height: 39px;
     top: 23px;
     left: 164px;
-    gap: 0px;
-    opacity: 0px;
+    gap: 0;
 }
 
 .circle{
@@ -132,13 +136,11 @@ object{
 
 .mid{
     padding-top: 60px;
-    margin-left: 400px;
+    margin-left: 10%;
     width: 1110px;
     height: 461px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     position: absolute;
-    top: 100;
-    left: 0;
 }
 
 .mid h1,h2{
@@ -154,19 +156,29 @@ object{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: self-start;
+    align-items: center;
     margin-top: 70px;
     margin-left: 30px;
     max-width: 2000px;
     gap: 60px;
+    box-sizing: border-box;
 }
 
-.blocks article{
+.blocks .product{
     background-color: #d2e198;
-    padding: 30px;
     border-radius: 10px;
+    padding: 25px;
     width: 200px;
-    height: 300px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
 }
 
 .blocks .price{
@@ -178,9 +190,36 @@ object{
     text-align: left;
 }
 
-.blocks button{
+.product button{
+    position: absolute;
     cursor: pointer;
     background-color: #89916e;
     padding: 5px;
     border-radius: 3px;
+    align-self: center;
+    bottom: 5px;
+}
+
+.footer {
+    position: relative;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 600px;
+    background-color: #4c5c30;
+    margin-top: 800px;
+}
+
+.footer p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 30px;
+    padding-top: 60px;
+    padding-left: 10%;
+}
+
+.footer__menu p{
+    font-size: 25px;
+    color: white;
+    opacity: 90%;
 }
