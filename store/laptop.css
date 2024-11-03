@@ -4,10 +4,6 @@
     scroll-behavior: smooth;
 }
 
-a{
-    cursor: default;
-}
-
 button {
     border: none;
     outline: none;
@@ -74,10 +70,10 @@ body {
     font-size: 16px;
     line-height: 24px;
     text-align: left;
-    padding-top: 30px;
+    margin-top: 30px;
     text-decoration: underline;
+    display: inline-block;
 }
-
 
 .container {
     max-width: 1120px;
@@ -231,6 +227,10 @@ object{
 .footer__menu{
     display: flex;
     flex-direction: column;
+}
+
+.footer__menu a{
+    cursor: default;
 }
 
 .footer__menu p{
