@@ -5,8 +5,7 @@
 }
 
 a{
-    color: white;
-    text-decoration: none;
+    cursor: default;
 }
 
 button {
@@ -24,7 +23,7 @@ body {
     position: relative;
      color: whitesmoke;
      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
-     padding: 200px 50px;
+     padding: 100px 50px;
     }
 
 .top::after {
@@ -157,7 +156,7 @@ object{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 70px;
+    margin-top: 30px;
     margin-left: 30px;
     max-width: 2000px;
     gap: 60px;
@@ -169,16 +168,15 @@ object{
     border-radius: 10px;
     padding: 25px;
     width: 200px;
-    height: 500px;
+    height: 480px;
     display: flex;
     flex-direction: column;
 }
 
 .product img {
     width: 100%;
-    height: auto;
-    max-width: 100%;
-    object-fit: contain;
+    height: 200px;
+    object-fit: cover;
 }
 
 .blocks .price{
@@ -194,10 +192,14 @@ object{
     position: absolute;
     cursor: pointer;
     background-color: #89916e;
-    padding: 5px;
+    padding: 5px 40px 5px 40px;
     border-radius: 3px;
-    align-self: center;
-    bottom: 5px;
+    align-self: flex-end;
+    bottom: 18px;
+}
+
+.product .caption{
+    margin-top: 5px;
 }
 
 .footer {
@@ -207,19 +209,35 @@ object{
     bottom: 0;
     height: 600px;
     background-color: #4c5c30;
-    margin-top: 800px;
+    margin-top: 810px;
 }
 
 .footer p{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
     font-size: 30px;
-    padding-top: 60px;
+}
+
+.footer .copyright{
+    padding-top: 3%;
     padding-left: 10%;
+}
+
+.footer__menu{
+    display: flex;
+    flex-direction: column;
 }
 
 .footer__menu p{
     font-size: 25px;
     color: white;
     opacity: 90%;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 10%;
+    margin-top: 3%;
+}
+
+.footer__menu p:hover{
+    opacity: 70%;
 }
