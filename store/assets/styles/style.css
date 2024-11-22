@@ -18,7 +18,7 @@ body {
     position: relative;
      color: whitesmoke;
      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
-     padding: 100px 50px;
+     padding: 100px;
     }
 
 .top::after {
@@ -143,7 +143,7 @@ object{
 
 .mid h2{
     font-weight: 500;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .footer {
@@ -243,4 +243,5 @@ object{
 
     .product .caption{
         margin-top: 5px;
+        text-overflow: ellipsis;
 }
