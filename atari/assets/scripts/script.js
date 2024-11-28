@@ -1,23 +1,32 @@
-function evenNumbers(n){
-     for (let i = 1; i <= n; i++) {
-        if (i % 2 === 0) {
-            console.log(i);
-        }
-    }
-}
-
-
-console.log(evenNumbers(286))
-
-
-// Получаем ссылку на элемент, куда будем выводить результат
 const keyOutput = document.getElementById('keyOutput');
-
-// Добавляем обработчик события для нажатия клавиши
 document.addEventListener('keydown', function(event) {
-    // Считываем код клавиши
-    const keyPressed = event.key; // Выводит символ клавиши (например, 'a', 'Enter', 'Shift')
-    
-    // Выводим на экран
+    const keyPressed = event.key;
     keyOutput.textContent = `${keyPressed}`;
 });
+
+let platformMoveInterval;
+
+window.onkeydown = function(event) {
+    const platform = document.querySelector('.platform');
+
+    if (platformMoveInterval) return;
+
+    if (event.key === 'ArrowLeft') {
+        platformMoveInterval = setInterval(() => {
+            if (platform.offsetLeft - 10 >= 0) {
+                platform.style.left = `${platform.offsetLeft - 10}px`;
+            }
+        }, 15);
+    } else if (event.key === 'ArrowRight') {
+        platformMoveInterval = setInterval(() => {
+            if (platform.offsetLeft + 10 <= window.innerWidth - platform.offsetWidth) {
+                platform.style.left = `${platform.offsetLeft + 10}px`;
+            }
+        }, 15);
+    }
+};
+
+window.onkeyup = function() {
+    clearInterval(platformMoveInterval);
+    platformMoveInterval = null;
+};
